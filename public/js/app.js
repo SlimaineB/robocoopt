@@ -1739,14 +1739,14 @@ function trim(str) {
  *  typeof document -> undefined
  *
  * react-native:
- *  navigator.product -> 'ReactNative'
+ *  navigator.mission -> 'ReactNative'
  * nativescript
- *  navigator.product -> 'NativeScript' or 'NS'
+ *  navigator.mission -> 'NativeScript' or 'NS'
  */
 function isStandardBrowserEnv() {
-  if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
-                                           navigator.product === 'NativeScript' ||
-                                           navigator.product === 'NS')) {
+  if (typeof navigator !== 'undefined' && (navigator.mission === 'ReactNative' ||
+                                           navigator.mission === 'NativeScript' ||
+                                           navigator.mission === 'NS')) {
     return false;
   }
   return (
@@ -11096,7 +11096,7 @@ function adjustCSS( elem, prop, valueParts, tween ) {
 		while ( maxIterations-- ) {
 
 			// Evaluate and update our best guess (doubling guesses that zero out).
-			// Finish if the scale equals or crosses 1 (making the old*new product non-positive).
+			// Finish if the scale equals or crosses 1 (making the old*new mission non-positive).
 			jQuery.style( elem, prop, initialInUnit + unit );
 			if ( ( 1 - scale ) * ( 1 - ( scale = currentValue() / initial || 0.5 ) ) <= 0 ) {
 				maxIterations = 0;
@@ -32065,7 +32065,7 @@ return jQuery;
         }
         index = offset + match.length;
 
-        // The JS engine embedded in Adobe products needs `match` returned in
+        // The JS engine embedded in Adobe missions needs `match` returned in
         // order to produce the correct `offset` value.
         return match;
       });
@@ -33679,7 +33679,7 @@ return jQuery;
      * @category Math
      * @param {number} multiplier The first number in a multiplication.
      * @param {number} multiplicand The second number in a multiplication.
-     * @returns {number} Returns the product.
+     * @returns {number} Returns the mission.
      * @example
      *
      * _.multiply(6, 4);

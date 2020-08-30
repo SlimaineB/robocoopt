@@ -1,0 +1,16 @@
+#First, download the Laravel installer using Composer:
+composer global require laravel/installer
+
+#Create project 
+laravel new robocoopt
+
+#Create missions model
+php artisan make:migration create_missions_table --create=missions
+
+#Update C:\wamp64\www\robocoopt\app\Providers\AppServiceProvider.php avec Schema::defaultStringLength(191);
+
+#Update database/migrations/* script and Create database missions model :
+php artisan migrate
+
+#Create MissionController
+php artisan make:controller MissionController --resource --model=Mission
