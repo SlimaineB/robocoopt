@@ -21,4 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('missions','MissionController');
+Route::resource('missions','MissionController')->middleware('auth');;
+
+//Route::get('/missions', 'MissionController@index')->name('missions');
