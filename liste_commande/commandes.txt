@@ -14,3 +14,12 @@ php artisan migrate
 
 #Create MissionController
 php artisan make:controller MissionController --resource --model=Mission
+
+#To feed database with fake data: create factories/MissionFactory and run :
+php artisan tinker
+factory(App\Mission::class, 200)->create();
+
+
+#Install advanced datatables 
+composer require yajra/laravel-datatables-oracle
+
